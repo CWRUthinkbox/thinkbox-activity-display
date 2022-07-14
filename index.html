@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Sears think[box] Activity Display</title>
+
+    <!-- Refresh the page every 15 minutes to collect new events-->
+    <meta http-equiv="refresh" content="900" />
+
+    <!--Collect the calendar from Style My GCal-->
+    <script
+      type="text/javascript"
+      src="https://stylemygcal.com/widget.js"
+    ></script>
+
+    <!-- Import the webpage's javascript file and call the function -->
+    <script src="/script.js"></script>
+    <script>
+      getDayStylesheet();
+    </script>
+    
+    <!-- Import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    
+    <!-- Import fixes to the SMGC calendar styles -->
+    <!--link rel="stylesheet" href="/cal-fixes/tours.css" /-->
+  </head>
+  <body onload="showContent()">
+    <header></header>
+    <main>
+      <div>
+        <h1>Activities</h1>
+        <!--div
+          class="smgc-calendar-placeholder"
+          id="smgc-cal-mFe614eHC1HGYkjy73Lz"
+        ></div-->
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrizu0zEms5YHFC3?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>  
+      
+      </div>
+      <div>
+        <h1>Visitors</h1>
+        <!--div
+          class="smgc-calendar-placeholder"
+          id="smgc-cal-zgRhsVYj6Ck16raWOvKM"
+        ></div-->
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrPhHfSSMpTgbEuU?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+      </div>
+      <div>
+        <h1>Tours</h1>
+        <!--div
+          class="smgc-calendar-placeholder"
+          id="smgc-cal-pciPlVioygwYNd4REV36"
+        ></div-->
+        <iframe class="airtable-embed" src="https://airtable.com/embed/shrc43rAvmAAozCQR?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+      </div>
+    </main>
+    <footer>
+      <div>Sears think[box]</div>
+    </footer>
+  </body>
+</html>

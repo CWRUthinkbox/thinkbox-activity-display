@@ -1,0 +1,96 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: "Titillium Web", sans-serif;
+  user-select: none !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+}
+
+header,
+footer {
+  z-index: 1;
+  background-color: #0a304e;
+}
+
+header,
+footer,
+main > div {
+  box-shadow: 0px 0px 15px gray;
+}
+
+header {
+  height: 3%;
+}
+
+footer {
+  height: 12%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+footer > div {
+  color: white;
+  font-size: 5vh;
+  margin: 32px;
+}
+
+main {
+  flex: auto;
+  background-color: #ccc;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+main > div {
+  background-color: white;
+  z-index: 2;
+  margin: 2vw;
+  padding: 2vw;
+  flex: 0 0 25vw;
+}
+
+.floor-1,
+.floor-2,
+.floor-3,
+.floor-4,
+.floor-5,
+.floor-6,
+.floor-7 {
+  display: none;
+}
+
+.airtable-embed {
+  height: 75% !important;
+}
+
+/*Hide unwanted Style My GCal elements*/
+
+#smgc-cal-zgRhsVYj6Ck16raWOvKM-calendar-container,
+#smgc-cal-pciPlVioygwYNd4REV36-calendar-container,
+#smgc-cal-mFe614eHC1HGYkjy73Lz-calendar-container,
+main > div {
+  overflow: hidden !important;
+}
+
+#smgc-cal-zgRhsVYj6Ck16raWOvKM-prev-week-button,
+#smgc-cal-zgRhsVYj6Ck16raWOvKM-next-week-button,
+#smgc-cal-pciPlVioygwYNd4REV36-prev-week-button,
+#smgc-cal-pciPlVioygwYNd4REV36-next-week-button,
+#smgc-cal-mFe614eHC1HGYkjy73Lz-prev-week-button,
+#smgc-cal-mFe614eHC1HGYkjy73Lz-next-week-button,
+.add-calendar-button,
+img {
+  display: none !important;
+}

@@ -1,0 +1,48 @@
+/*Sunday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(2),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(2),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(2) {
+  /*display: none !important;*/
+}
+
+/*Monday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(3),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(3),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(3) {
+  display: none !important;
+}
+
+/*Tuesday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(4),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(4),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(4) {
+  display: none !important;
+}
+
+/*Wednesday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(5),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(5),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(5) {
+  display: none !important;
+}
+
+/*Thursday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(6),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(6),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(6) {
+  display: none !important;
+}
+
+/*Friday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(7),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(7),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(7) {
+  display: none !important;
+}
+
+/*Saturday*/
+.smgc-cal-zgRhsVYj6Ck16raWOvKM-week-day-container:nth-of-type(8),
+.smgc-cal-pciPlVioygwYNd4REV36-week-day-container:nth-of-type(8),
+.smgc-cal-mFe614eHC1HGYkjy73Lz-week-day-container:nth-of-type(8) {
+  display: none !important;
+}
