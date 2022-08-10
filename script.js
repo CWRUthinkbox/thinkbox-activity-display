@@ -62,22 +62,23 @@ function showContent() {
 var today = new Date();
 var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
 
-timer();
+dateAndTime();
 
-function timer(){
+function dateAndTime(){
 	// Function to format 1 in 01
   const zeroFill = n => {
     return ('0' + n).slice(-2);
   }
-  // Creates interval
-  const interval = setInterval(() => {
-    // Get current time
+    //Creates interval
+    const interval = setInterval(() => {
+    
+    //Current time
     const now = new Date();
 
-    //Format date as in mm/dd/aaaa hh:ii:ss
+    //Format date 
     const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
 
-    //Display the date and time on the screen using div#date-time
+    //Display the date and time 
     document.getElementById('date-time').innerHTML = dateTime;
   }, 1000);
 }
