@@ -65,26 +65,21 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
 timer();
 
 function timer(){
-var currentTime = new Date()
-var hours = currentTime.getHours()
-var minutes = currentTime.getMinutes()
-var sec = currentTime.getSeconds()
-if (minutes < 10){
-    minutes = "0" + minutes
-}
-if (sec < 10){
-    sec = "0" + sec
-}
-var t_str = hours + ":" + minutes + ":" + sec + " ";
+	// Function to format 1 in 01
+  const zeroFill = n => {
+    return ('0' + n).slice(-2);
+  }
+  // Creates interval
+  const interval = setInterval(() => {
+    // Get current time
+    const now = new Date();
 
-if(hours > 11){
-    t_str += "PM";
+    //Format date as in mm/dd/aaaa hh:ii:ss
+    const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
 
-  } else {
-   t_str += "AM";
-}
- document.getElementById('time_span').innerHTML = t_str;
- setTimeout(timer,1000);
+    //Display the date and time on the screen using div#date-time
+    document.getElementById('date-time').innerHTML = dateTime;
+  }, 1000);
 }
 
 /*
