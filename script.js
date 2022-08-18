@@ -59,9 +59,6 @@ function showContent() {
     content[i].classList.remove("floor-"+floor);
   }
 
-var today = new Date();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
 dateAndTime();
 
 function dateAndTime(){
@@ -76,20 +73,11 @@ function dateAndTime(){
     const now = new Date();
 
     //Format date 
-    const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + zeroFill(now.getHours()) + ':' + zeroFill(now.getMinutes()) + ':' + zeroFill(now.getSeconds());
+    const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + (now.getHours() % 12) + ':' + zeroFill(now.getMinutes());
 
     //Display the date and time 
     document.getElementById('date-time').innerHTML = dateTime;
   }, 1000);
 }
-
-/*
-let day = dt.getDay();
-let month = dt.getMonth();
-let year = dt.getYear();
-
-document.getElementById('day').innerHTML = day;
-document.getElementById('month').innerHTML = month;
-document.getElementById('year').innerHTML = year;*/
 
 }
