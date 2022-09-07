@@ -37,11 +37,13 @@ footer {
   height: 12%;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
 footer > div {
   color: white;
   font-size: 5vh;
+  font-weight: 700;
   margin: 32px;
   display: flex;
   align-items: center;
@@ -49,11 +51,11 @@ footer > div {
 
 footer > div#date-time{
   color: white;
-  font-size: 5vh;
+  font-size: 3.5vh;
+  font-weight: lighter;
   margin: 32px;
   display: flex;
   justify-content: flex-start;
-
 }
 
 main {
