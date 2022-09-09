@@ -73,8 +73,8 @@ function dateAndTime(){
     const now = new Date();
 
     //Format date 
-    const dateTime = zeroFill((now.getMonth() + 1)) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' + (now.getHours() % 12) + ':' + zeroFill(now.getMinutes());
-
+    const dateTime = (now.getMonth() + 1) + '/' + zeroFill(now.getUTCDate()) + '/' + now.getFullYear() + ' ' +  ((now.getHours() + 11) % 12 + 1) + ':' + zeroFill(now.getMinutes());
+   
     //Display the date and time 
     document.getElementById('date-time').innerHTML = dateTime;
   }, 1000);
