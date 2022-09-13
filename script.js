@@ -79,5 +79,4 @@ function dateAndTime(){
     document.getElementById('date-time').innerHTML = dateTime;
   }, 1000);
 }
-
 }

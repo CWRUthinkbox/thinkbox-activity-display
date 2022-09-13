@@ -29,18 +29,48 @@
       <div>
         <h1>Activities</h1>
         
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrizu0zEms5YHFC3?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>  
-      
+        <iframe class="airtable-embed" id= "Activities" src="https://airtable.com/embed/shrizu0zEms5YHFC3?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>  
+        <script>
+          window.setInterval(function() {
+              reloadIFrame()
+          }, 3000);
+  
+          function reloadIFrame() {
+              console.log('Reloading..');
+              document.getElementById('Activities').contentWindow.location.reload();
+          }
+      </script>
+
       </div>
       <div>
         <h1>Visitors</h1>
         
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrPhHfSSMpTgbEuU?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <iframe class="airtable-embed" id="Visitors" src="https://airtable.com/embed/shrPhHfSSMpTgbEuU?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <script>
+          window.setInterval(function() {
+              reloadIFrame()
+          }, 3000);
+  
+          function reloadIFrame() {
+              console.log('Reloading..');
+              document.getElementById('Visitors').contentWindow.location.reload();
+          }
+      </script>
       </div>
       <div>
         <h1>Tours</h1>
 
-        <iframe class="airtable-embed" src="https://airtable.com/embed/shrc43rAvmAAozCQR?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <iframe class="airtable-embed" id="Tours" src="https://airtable.com/embed/shrc43rAvmAAozCQR?backgroundColor=yellow&layout=card" frameborder="0" onmousewheel="" width="100%" style="background: transparent; border: 1px solid #ccc;"></iframe>
+        <script>
+          window.setInterval(function() {
+              reloadIFrame()
+          }, 3000);
+  
+          function reloadIFrame() {
+              console.log('Reloading..');
+              document.getElementById('Tours').contentWindow.location.reload();
+          }
+      </script>
       </div>
     </main>
     <footer>
