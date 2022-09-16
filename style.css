@@ -86,23 +86,3 @@ main > div {
 .airtable-embed {
   height: 75% !important;
 }
-
-/*Hide unwanted Style My GCal elements*/
-
-#smgc-cal-zgRhsVYj6Ck16raWOvKM-calendar-container,
-#smgc-cal-pciPlVioygwYNd4REV36-calendar-container,
-#smgc-cal-mFe614eHC1HGYkjy73Lz-calendar-container,
-main > div {
-  overflow: hidden !important;
-}
-
-#smgc-cal-zgRhsVYj6Ck16raWOvKM-prev-week-button,
-#smgc-cal-zgRhsVYj6Ck16raWOvKM-next-week-button,
-#smgc-cal-pciPlVioygwYNd4REV36-prev-week-button,
-#smgc-cal-pciPlVioygwYNd4REV36-next-week-button,
-#smgc-cal-mFe614eHC1HGYkjy73Lz-prev-week-button,
-#smgc-cal-mFe614eHC1HGYkjy73Lz-next-week-button,
-.add-calendar-button,
-img {
-  display: none !important;
-}
