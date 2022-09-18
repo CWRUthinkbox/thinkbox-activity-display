@@ -17,6 +17,7 @@ function showContent() {
   for (var i = 0; i < content.length; i++) {
     content[i].classList.remove("floor-"+floor);
   }
+}
 
 dateAndTime();
 
@@ -38,4 +39,21 @@ function dateAndTime(){
     document.getElementById('date-time').innerHTML = dateTime;
   }, 1000);
 }
+
+function reloadIFrame(id) {
+  console.log('Reloading'+id);
+  document.getElementById(id).src += '';
+}
+
+function startIframeReload(id, intervalMs){
+  window.setInterval(function() {
+    reloadIFrame(id)
+  }, intervalMs);
+}
+function runScripts(){
+  showContent(); 
+  
+  startIframeReload('Activities', 9000);
+  setTimeout(startIframeReload('Visitors', 9000), 3000); 
+  setTimeout(startIframeReload('Tours', 9000), 6000); 
 }
