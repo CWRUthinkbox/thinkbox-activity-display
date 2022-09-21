@@ -52,8 +52,13 @@ function startIframeReload(id, intervalMs){
 }
 function runScripts(){
   showContent(); 
-  
-  startIframeReload('Activities', 9000);
-  setTimeout(startIframeReload('Visitors', 9000), 3000); 
-  setTimeout(startIframeReload('Tours', 9000), 6000); 
+  startIframeReload('Activities', 300000); //5mins 
+  setTimeout(startIframeReload('Visitors', 300000), 60000); //timeout for 1 min
+  setTimeout(startIframeReload('Tours', 300000), 120000); //timeout for 2 mins
+
+  //refresh whole page every ___
+  window.setTimeout(function(){
+    location.reload();
+    }, 3600000);
 }
+
