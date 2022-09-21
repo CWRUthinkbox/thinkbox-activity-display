@@ -56,7 +56,7 @@ function runScripts(){
   setTimeout(startIframeReload('Visitors', 300000), 60000); //timeout for 1 min
   setTimeout(startIframeReload('Tours', 300000), 120000); //timeout for 2 mins
 
-  //refresh whole page every ___
+  //refresh whole page every hour
   window.setTimeout(function(){
     location.reload();
     }, 3600000);
