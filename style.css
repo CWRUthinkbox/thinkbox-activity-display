@@ -25,7 +25,7 @@ footer {
 
 header,
 footer,
-main > div {
+.card {
   box-shadow: 0px 0px 15px gray;
 }
 
@@ -65,12 +65,22 @@ main {
   justify-content: space-evenly;
 }
 
-main > div {
+.card {
   background-color: white;
   z-index: 2;
   margin: 2vw;
   padding: 2vw;
   flex: 0 0 25vw;
+}
+
+.card-content{
+  height: 85%;
+  width: 100%;
+}
+
+.google-slides{
+  height: 100%;
+  width: 100%;
 }
 
 .floor-1,
@@ -84,5 +94,5 @@ main > div {
 }
 
 .airtable-embed {
-  height: 75% !important;
+  height: 100% !important;
 }
