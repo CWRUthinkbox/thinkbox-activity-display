@@ -59,18 +59,25 @@ footer > div#date-time{
 }
 
 main {
+  display: flex;
   flex: auto;
   background-color: #ccc;
-  display: flex;
-  justify-content: space-evenly;
+  
+  /*align-content: space-around;*/
+  /*row-gap: 5 vw; */
 }
 
 .card {
   background-color: white;
   z-index: 2;
-  margin: 2vw;
+  flex: 1 1 auto;
+  flex: 0 1 calc(25% - 1em); 
+  
+  /*margin-right: 0.5 vw;
+  margin-left: 0.5 vw; 
   padding: 2vw;
-  flex: 0 0 25vw;
+  flex: 1 1 auto; 
+  align-content: space-between; */
 }
 
 .card-content{
