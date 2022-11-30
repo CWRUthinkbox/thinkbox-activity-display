@@ -1,3 +1,7 @@
+:root{
+
+}
+
 html,
 body {
   height: 100%;
@@ -62,22 +66,19 @@ main {
   display: flex;
   flex: auto;
   background-color: #ccc;
+  justify-content:space-around;
+  padding: 10px;
+  gap: 10px;
+  /*overflow: hidden; */
   
-  /*align-content: space-around;*/
-  /*row-gap: 5 vw; */
 }
 
 .card {
+
   background-color: white;
   z-index: 2;
-  flex: 1 1 auto;
-  flex: 0 1 calc(25% - 1em); 
-  
-  /*margin-right: 0.5 vw;
-  margin-left: 0.5 vw; 
-  padding: 2vw;
   flex: 1 1 auto; 
-  align-content: space-between; */
+  padding: 10px;
 }
 
 .card-content{
