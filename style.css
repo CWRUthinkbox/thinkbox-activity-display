@@ -67,8 +67,8 @@ main {
   flex: auto;
   background-color: #ccc;
   justify-content:space-around;
-  padding: 10px;
-  gap: 10px;
+  padding: 20px;
+  gap: 20px;
   /*overflow: hidden; */
   
 }
