@@ -1,3 +1,4 @@
+/*test comment*/
 :root{
 
 }
@@ -63,20 +64,23 @@ footer > div#date-time{
 }
 
 main {
-  display: flex;
+  display: flex; 
   flex: auto;
   background-color: #ccc;
   justify-content:space-around;
   padding: 20px;
   gap: 20px;
+  
 }
 
 .card {
 
-  background-color: white;
-  z-index: 2;
+  background-color: white;  /*flex basis: 25%*/
+  z-index: 2;                  /*padding-left, padding-right: 0.25rem */
   flex: 1 1 auto; 
   padding: 10px;
+  height: 99vh;
+  width: 99vw; 
 }
 
 .card-content{
