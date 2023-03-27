@@ -55,6 +55,7 @@ function runScripts(){
   startIframeReload('Activities', 300000); //5mins 
   setTimeout(startIframeReload('Visitors', 300000), 60000); //timeout for 1 min
   setTimeout(startIframeReload('Tours', 300000), 120000); //timeout for 2 mins
+  setTimeout(startIframeReload('Flyers', 300000), 180000);
 
   //refresh whole page every hour
   window.setTimeout(function(){
