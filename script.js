@@ -15,7 +15,7 @@ function showContent() {
 
   //Remove that class, so they are displayed
   for (var i = 0; i < content.length; i++) {
-    content[i].classList.remove("floor-"+floor);
+    content[i].style.display = "block";
   }
 }
 
