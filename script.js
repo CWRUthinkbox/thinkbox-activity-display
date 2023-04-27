@@ -55,6 +55,33 @@ function runScripts(){
   startIframeReload('Activities', 300000); //5mins 
   setTimeout(startIframeReload('Visitors', 300000), 60000); //timeout for 1 min
   setTimeout(startIframeReload('Tours', 300000), 120000); //timeout for 2 mins
+  
+  /* TESTING FOOTER SPACE IN THIS FUNCTION */
+
+  const baseId = 'appwKPlsDzMt9k08I';
+  const tableName = 'tblbXSfPY3SXNojxM';
+  const recordId = 'recCGR2qgkISoLUsV';
+  const fieldName = 'FIRST NAME';
+  const authToken = 'Bearer patxcEsm9mgqsmesB.b96a8335ec0b3d838bdfc3a564259d38926bcf49da068bc56856299fc0ff3c48';
+  const footerSpace = document.querySelector('.footer-space')
+  
+  const url = `https://api.airtable.com/v0/${baseId}/${tableName}/${recordId}`;
+  const headers = {
+    'Authorization': authToken,
+    'Content-Type': 'application/json'
+  };
+  
+  fetch(url, {
+    headers: headers
+  })
+    .then(response => response.json())
+    .then(data => {
+      const fieldValue = data.fields[fieldName];
+      footerSpace.textContent = fieldValue;
+    })
+    .catch(error => console.error(error));
+
+  /* END TESTING */
 
   //refresh whole page every hour
   window.setTimeout(function(){

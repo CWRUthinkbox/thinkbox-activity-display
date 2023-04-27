@@ -4,9 +4,10 @@ const baseId = 'appwKPlsDzMt9k08I'; // base id of TBX tool-loan base
 const tableName = 'tblbXSfPY3SXNojxM'; // table id of table that we're viewing in tool-loans
 const recordId = 'recCGR2qgkISoLUsV'; // Let's say we're editing record 643 (a test record Zack K. made)
 const fieldName = 'FIRST NAME';
-const newValue = 'Nivita Test';
+// const newValue = 'Nivita Test';
 
 const footerSpace = document.querySelector('.footer-space') //access the footer from the html script
+//footerSpace.textContent = "test";
 
 const url = `https://api.airtable.com/v0/${baseId}/${tableName}/${recordId}`;
 const headers = {
@@ -34,7 +35,6 @@ const req = https.request(url, options, (res) => {
   
   req.write(JSON.stringify(data));
   req.end();
-  console.log('fieldValue')
 
 
 
