@@ -56,7 +56,7 @@ function runScripts(){
   setTimeout(startIframeReload('Visitors', 300000), 60000); //timeout for 1 min
   setTimeout(startIframeReload('Tours', 300000), 120000); //timeout for 2 mins
   
-  /* TESTING FOOTER SPACE IN THIS FUNCTION */
+  /* TESTING AT QUERY IN FOOTER SPACE IN THIS SECTION */
 
   const baseId = 'appwKPlsDzMt9k08I';
   const tableName = 'tblbXSfPY3SXNojxM';
@@ -71,17 +71,33 @@ function runScripts(){
     'Content-Type': 'application/json'
   };
   
-  fetch(url, {
-    headers: headers
-  })
-    .then(response => response.json())
-    .then(data => {
-      const fieldValue = data.fields[fieldName];
-      footerSpace.textContent = fieldValue;
-    })
-    .catch(error => console.error(error));
+  // fetch(url, {
+  //   headers: headers
+  // })
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     const fieldValue = data.fields[fieldName];
+  //     footerSpace.textContent = fieldValue;
+  //   })
+  //   .catch(error => console.error(error));
 
   /* END TESTING */
+
+  /*TESTING GOING THROUGH A LIST IN THIS FUNCTION */
+  const elements = ["Element 1", "Element 2", "Element 3"];
+  let index = 0;
+  function displayElement() {
+    // Get the element with the ID "footer" and set its text to the current element
+    footerSpace.textContent = elements[index];
+    // Increment the index and reset to 0 if it exceeds the length of the array
+    index++;
+    if (index >= elements.length) {
+      index = 0;
+    }
+  }
+  setInterval(displayElement, 5000);
+  /* END TESTING */
+
 
   //refresh whole page every hour
   window.setTimeout(function(){
