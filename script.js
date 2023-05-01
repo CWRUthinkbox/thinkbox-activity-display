@@ -1,12 +1,17 @@
+function getParameterByName(name, url = window.location.href) {
+  name = name.replace(/[\[\]]/g, '\\$&');
+  var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+      results = regex.exec(url);
+  if (!results) return null;
+  if (!results[2]) return '';
+  return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
 function showContent() {
   
   //Get URL params, expecting floor=x where x is 1-7
   // For example: "https://serious-confused-king.glitch.me/?floor=5" 
-  const queryString = window.location.search;
-  console.log(queryString);
-  const urlParams = new URLSearchParams(queryString);
-  console.log(urlParams);
-  const floor = urlParams.get('floor');
+  var floor = getParameterByName('floor')
   console.log(floor)
   
   //Select all elements with the appropriate class
