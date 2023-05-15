@@ -57,7 +57,7 @@ function runScripts(){
   setTimeout(startIframeReload('Tours', 300000), 120000); //timeout for 2 mins
   
   /* TESTING AT QUERY IN FOOTER SPACE IN THIS SECTION */
-
+  const Airtable = require('airtable');
   const baseId = 'appwKPlsDzMt9k08I';
   const tableName = 'tblbXSfPY3SXNojxM';
   const recordId = 'recYj1NC9nUkOen9e';
@@ -134,7 +134,7 @@ var list = [];
 
 base('Tool Loans').select({
     // Selecting the first 3 records in OPEN LOANS:
-    maxRecords: 3,
+    maxRecords: 100000,
     view: "OPEN LOANS"
 }).eachPage(function page(records, fetchNextPage) {
     // This function (`page`) will get called for each page of records.
