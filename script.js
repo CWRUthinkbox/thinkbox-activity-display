@@ -60,7 +60,7 @@ function runScripts(){
 
   const baseId = 'appwKPlsDzMt9k08I';
   const tableName = 'tblbXSfPY3SXNojxM';
-  const recordId = 'recCGR2qgkISoLUsV';
+  const recordId = 'recYj1NC9nUkOen9e';
   const fieldName = 'FIRST NAME';
   const authToken = 'Bearer patxcEsm9mgqsmesB.b96a8335ec0b3d838bdfc3a564259d38926bcf49da068bc56856299fc0ff3c48';
   const footerSpace = document.querySelector('.footer-space')
@@ -84,20 +84,124 @@ function runScripts(){
   /* END TESTING */
 
   /*TESTING GOING THROUGH A LIST IN THIS FUNCTION */
-  const elements = ["Element 1", "Element 2", "Element 3"];
+  // const elements = ["Element 1", "Element 2", "Element 3"];
+  // let index = 0;
+  // function displayElement() {
+  //   // Get the element with the ID "footer" and set its text to the current element
+  //   footerSpace.textContent = elements[index];
+  //   // Increment the index and reset to 0 if it exceeds the length of the array
+  //   index++;
+  //   if (index >= elements.length) {
+  //     index = 0;
+  //   }
+  // }
+  // setInterval(displayElement, 2000);
+  /* END TESTING */
+
+  //----------------------------------------------------------------
+
+// TESTING USING AIRTABLE API !! # !
+// var Airtable = require('airtable');
+// var base = new Airtable({apiKey: 'patxcEsm9mgqsmesB.b96a8335ec0b3d838bdfc3a564259d38926bcf49da068bc56856299fc0ff3c48'}).base('appwKPlsDzMt9k08I');
+
+// base('Tool Loans').select({
+//     // Selecting the first 3 records in OPEN LOANS:
+//     maxRecords: 3,
+//     view: "OPEN LOANS"
+// }).eachPage(function page(records, fetchNextPage) {
+//     // This function (`page`) will get called for each page of records.
+
+//     records.forEach(function(record) {
+//         console.log('Retrieved', record.get(fieldName));
+//     });
+
+//     // To fetch the next page of records, call `fetchNextPage`.
+//     // If there are more records, `page` will get called again.
+//     // If there are no more records, `done` will get called.
+//     fetchNextPage();
+
+// }, function done(err) {
+//     if (err) { console.error(err); return; }
+// });
+
+// END TESTING!
+
+// Testing airtable api # 2
+
+// var Airtable = require('airtable');
+var base = new Airtable({apiKey: authToken}).base(baseId);
+var list = []; 
+
+base('Tool Loans').select({
+    // Selecting the first 3 records in OPEN LOANS:
+    maxRecords: 3,
+    view: "OPEN LOANS"
+}).eachPage(function page(records, fetchNextPage) {
+    // This function (`page`) will get called for each page of records.
+
+    records.forEach(function(record) {
+        console.log('Retrieved', record.get('#'));
+        list.push(record.get('#')); 
+    });
+
   let index = 0;
   function displayElement() {
     // Get the element with the ID "footer" and set its text to the current element
-    footerSpace.textContent = elements[index];
+    footerSpace.textContent = list[index];
     // Increment the index and reset to 0 if it exceeds the length of the array
     index++;
-    if (index >= elements.length) {
+    if (index >= list.length) {
       index = 0;
     }
   }
-  setInterval(displayElement, 5000);
-  /* END TESTING */
+  setInterval(displayElement, 2000);
 
+    // To fetch the next page of records, call `fetchNextPage`.
+    // If there are more records, `page` will get called again.
+    // If there are no more records, `done` will get called.
+    fetchNextPage();
+
+}, function done(err) {
+    if (err) { console.error(err); return; }
+});
+
+
+// END testing
+
+// ---------------------------------------------------------------------------
+
+  // function fetchRecords(offset) {
+  //   let url = `https://api.airtable.com/v0/${baseId}/${tableName}?view=Grid%20view&fields=${fieldName}&pageSize=100`;
+  //   if (offset) {
+  //     url += `&offset=${offset}`;
+  //   }
+  //   return fetch(url, { headers: headers })
+  //     .then(response => response.json())
+  //     .then(data => {
+  //       let records = data.records;
+  //       if (data.offset) {
+  //         return fetchRecords(data.offset)
+  //           .then(moreRecords => {
+  //             records = records.concat(moreRecords);
+  //             return records;
+  //           });
+  //       } else {
+  //         return records;
+  //       }
+  //     })
+  //     .catch(error => console.error(error));
+  // }
+
+  // fetchRecords().then(records => {
+  //   const firstNames = records.map(record => record.fields[fieldName]);
+  //   console.log(firstNames);
+  //   const footerElement = document.getElementById('footer-space');
+  //   let currentIndex = 0;
+  //   setInterval(() => {
+  //     footerElement.innerText = firstNames[currentIndex];
+  //     currentIndex = (currentIndex + 1) % firstNames.length;
+  //   }, 5000);
+  // });
 
   //refresh whole page every hour
   window.setTimeout(function(){
