@@ -102,6 +102,30 @@ main {
   display: none;
 }
 
+/*for floor 6 presentations*/
+.center-content-6{
+  max-height: 600px; 
+  max-width: 1000px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+}
+
+/*for floor 5 and 6 flyers*/
+.floor-5-6-flyers{
+  /* max-height: 600px;  */
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+
+}
+
+.floor-5-activities{
+  max-width: 700px; 
+}
+
 .airtable-embed {
   height: 100% !important;
 }
