@@ -102,14 +102,22 @@ main {
   display: none;
 }
 
-/*for floor 6 presentations*/
+/*for floor 6 presentation*/
 .center-content-6{
-  max-height: 600px; 
-  max-width: 1000px;
+  max-height: 900px; 
+  max-width: 1200px;
+  justify-content: center;
+  /* align-items: center; */
+  padding: 0.5rem;
+  bottom: 50px;
+
+}
+
+.center-iframe {
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem;
-
+  height: 80%; /* Ensure the iframe takes up the full height of the card-content div */
 }
 
 /*for floor 5 and 6 flyers*/
