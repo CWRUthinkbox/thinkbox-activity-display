@@ -137,3 +137,23 @@ main {
 .airtable-embed {
   height: 100% !important;
 }
+
+.welcome-sign-h1 {
+  background-color: #003071;
+  color: white;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 4rem;
+  padding: 4rem;
+  /* Add any other styling as needed */
+}
+
+.welcome-sign-h2 {
+  background-color: #003071;
+  color: white;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 2rem;
+  padding: 4rem;
+  /* Add any other styling as needed */
+}
