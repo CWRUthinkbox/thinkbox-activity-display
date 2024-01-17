@@ -12,11 +12,15 @@ function showContent() {
   //Get URL params, expecting floor=x where x is 1-7
   // For example: "https://serious-confused-king.glitch.me/?floor=5" 
   var floor = getParameterByName('floor')
-  console.log(floor)
+  if (floor != null){
+    console.log(floor)
+  } else {
+    console.warn("A URL parameter named \"floor\" with an integer value between 1 and 7 is required!")
+  }
   
   //Select all elements with the appropriate class
   var content = document.querySelectorAll(".floor-"+floor);
-  console.log(content);
+  //console.log(content);
 
   //Remove that class, so they are displayed
   for (var i = 0; i < content.length; i++) {
